@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#C0CCDA</color>
+
+    <color name="ColorPreto">#1E2D3E</color>
+    <color name="colorBranco">#FFFFFF</color>
+    <color name="vermelhoBotao">#FF5252</color>
+    <color name="cinzaBotao">#8492A6</color>
+
+</resources>
