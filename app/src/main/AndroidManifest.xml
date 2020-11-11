@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterActivity" android:theme="@style/AppThemeNoActionBar"></activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:theme="@style/AppThemeNoActionBar" />
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/AppThemeNoActionBar">
@@ -19,7 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
     </application>
 
 </manifest>

@@ -8,5 +8,6 @@
     <color name="colorBranco">#FFFFFF</color>
     <color name="vermelhoBotao">#FF5252</color>
     <color name="cinzaBotao">#8492A6</color>
+    <color name="cinzaOR">#47525E</color>
 
 </resources>
