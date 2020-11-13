@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DescricaoPratoActivity"></activity>
+        <activity
+            android:name=".DescricaoPratoActivity"
+            android:parentActivityName=".DescricaoPratoActivity" />
         <activity
             android:name=".RestaurantesActivity2"
             android:theme="@style/AppTheme" />
@@ -27,7 +29,8 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:launchMode="singleTop"/>
     </application>
 
 </manifest>
