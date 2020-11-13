@@ -59,39 +59,19 @@ class Register1Fragment : Fragment() {
             } else {
                 repeatePassword.text.clear()
 
-            }-
+            }
             if (todosCamposValidos) {
                 name.text?.clear()
                 email.text.clear()
                 password.text.clear()
                 repeatePassword.text.clear()
 
-                navController.navigate(R.id.action_register1Fragment_to_restaurantesActivity)
+                navController.navigate(R.id.action_register1Fragment_to_restaurantesActivity2)
             }
 
         }
 
-//
-//            when {
-//                name.toString().isEmpty() -> {
-//                    name.error = "Campo vazio"
-//                }
-//                email.toString().isEmpty() -> {
-//                    email.error = "Campo vazio"
-//                }
-//                password.toString().isEmpty() -> {
-//                    email.error = "Campo vazio"
-//                }
-//                repeatePassword.toString().isEmpty() -> {
-//                    email.error = "Campo vazio"
-//                }
-//                else -> {
-//                    navController.navigate(R.id.action_register1Fragment_to_restaurantesActivity)
-//                }
-//
-//            val intent = Intent(this, RestaurantesActivity::class.java)
-//            startActivity(intent)
-//            }
+
 
     }
 

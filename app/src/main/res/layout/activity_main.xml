@@ -17,7 +17,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="33dp">
+        android:layout_marginBottom="33dp"
+        android:backgroundTint="@color/colorPrimary">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
@@ -27,7 +28,6 @@
             app:navigationIcon="@drawable/white_arrow_back_24"
             app:title="Digital House Foods"
             app:titleTextColor="@color/colorBranco"
-
             />
     </com.google.android.material.appbar.AppBarLayout>
 

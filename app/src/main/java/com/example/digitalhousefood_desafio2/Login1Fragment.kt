@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import androidx.navigation.fragment.findNavController
 
 class Login1Fragment : Fragment() {
@@ -24,16 +25,35 @@ class Login1Fragment : Fragment() {
         val navController = findNavController()
 
         view.findViewById<Button>(R.id.btnLogin).setOnClickListener {
+            var camposValidos = true
+
+            val emailLogin = view.findViewById<EditText>(R.id.edtEmailLogin)
+            val passwordLogin = view.findViewById<EditText>(R.id.edtPasswordLogin)
 
 
-            navController.navigate(R.id.action_login1Fragment_to_restaurantesActivity2)
+            if (emailLogin.text.toString().isBlank()) {
+                emailLogin.error = "Campo vazio"
+                camposValidos = false
+            }
+
+            if (passwordLogin.text.toString().isBlank()) {
+                passwordLogin.error = "Campo vazio"
+                camposValidos = false
+            }
+            if (camposValidos) {
+                emailLogin.text?.clear()
+                passwordLogin.text?.clear()
+
+
+                navController.navigate(R.id.action_login1Fragment_to_restaurantesActivity2)
+            }
+
+            view.findViewById<Button>(R.id.btnREGISTER).setOnClickListener {
+                navController.navigate(R.id.action_login1Fragment_to_register1Fragment)
+            }
+
         }
-
-        view.findViewById<Button>(R.id.btnREGISTER).setOnClickListener {
-            navController.navigate(R.id.action_login1Fragment_to_register1Fragment)
-        }
-
     }
-
-
 }
+
+

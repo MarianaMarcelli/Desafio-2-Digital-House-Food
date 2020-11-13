@@ -20,14 +20,9 @@
         android:name="com.example.digitalhousefood_desafio2.Register1Fragment"
         android:label="Register1Fragment">
         <action
-            android:id="@+id/action_register1Fragment_to_restaurantesActivity"
-            app:destination="@id/restaurantesActivity" />
+            android:id="@+id/action_register1Fragment_to_restaurantesActivity2"
+            app:destination="@id/restaurantesActivity2" />
     </fragment>
-    <activity
-        android:id="@+id/restaurantesActivity"
-        android:name="com.example.digitalhousefood_desafio2.RestaurantesActivity"
-        android:label="activity_restaurantes"
-        tools:layout="@layout/activity_restaurantes" />
     <activity
         android:id="@+id/pratosPrincipaisActivity"
         android:name="com.example.digitalhousefood_desafio2.PratosPrincipaisActivity"

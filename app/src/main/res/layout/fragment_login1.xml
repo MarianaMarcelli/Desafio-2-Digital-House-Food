@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.01999998" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edtNameRegister"
+        android:id="@+id/edtNameLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="54dp"
@@ -54,6 +54,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmailLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
@@ -76,9 +77,10 @@
         app:hintTextColor="@color/cinzahint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtNameRegister">
+        app:layout_constraintTop_toBottomOf="@+id/edtNameLogin">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPasswordLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"

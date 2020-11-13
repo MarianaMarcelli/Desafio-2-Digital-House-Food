@@ -26,7 +26,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/edtNameRegister"
+        android:id="@+id/edtNameLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -63,7 +63,7 @@
         app:hintTextColor="@color/cinzahint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtNameRegister">
+        app:layout_constraintTop_toBottomOf="@+id/edtNameLogin">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editEmailRegister"
