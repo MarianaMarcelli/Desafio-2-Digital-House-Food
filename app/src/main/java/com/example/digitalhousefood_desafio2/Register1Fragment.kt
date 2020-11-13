@@ -31,10 +31,11 @@ class Register1Fragment : Fragment() {
 
             var todosCamposValidos = true
 
-            val name = view.findViewById<TextInputEditText>(R.id.editNameRegister)
+            val name = view.findViewById<EditText>(R.id.editNameRegister)
             val email = view.findViewById<EditText>(R.id.editEmailRegister)
             val password = view.findViewById<EditText>(R.id.editTextPassword)
             val repeatePassword = view.findViewById<EditText>(R.id.editTextRepeatPassword)
+
 
             if (name.text.toString().isBlank()) {
                 name.error = "Campo vazio"
@@ -52,16 +53,17 @@ class Register1Fragment : Fragment() {
             if (repeatePassword.text.toString().isBlank()) {
                 repeatePassword.error = "Campo Vazio"
                 todosCamposValidos = false
-            } else if (repeatePassword.text != password.text) {
+            } else if (repeatePassword.text.toString() != password.text.toString()) {
                 repeatePassword.error = "Repita a senha digitada anteriorente"
                todosCamposValidos = false
             }
 
             if (todosCamposValidos) {
-                name.text?.clear()
+                name.text.clear()
                 email.text.clear()
                 password.text.clear()
                 repeatePassword.text.clear()
+
 
                 navController.navigate(R.id.action_register1Fragment_to_restaurantesActivity2)
             }
