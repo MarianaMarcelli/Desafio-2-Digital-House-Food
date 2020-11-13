@@ -6,22 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".PratosPrincipaisActivity">
 
-    <fragment
-        android:id="@+id/fragment"
-        android:layout_width="match_parent"
+
+    <ImageView
+        android:id="@+id/imagemTony"
+        android:layout_width="0dp"
         android:layout_height="241dp"
-        android:layout_marginBottom="490dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/tony_romas" />
 
     <TextView
         android:id="@+id/txtPratosPrincipais"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/roboto"
         android:text="@string/pratos_principais"
         android:textColor="#5A6978"
@@ -29,25 +32,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment"
-        app:layout_constraintVertical_bias="0.0"
-        />
+        app:layout_constraintTop_toBottomOf="@id/imagemTony"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerPratos"
         android:layout_width="0dp"
-        android:layout_height="391dp"
+        android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtPratosPrincipais"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:listitem="@layout/modelo_prato"/>
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/modelo_prato" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

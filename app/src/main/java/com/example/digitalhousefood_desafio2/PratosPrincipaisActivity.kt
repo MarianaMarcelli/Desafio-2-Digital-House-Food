@@ -1,5 +1,6 @@
 package com.example.digitalhousefood_desafio2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
@@ -10,28 +11,34 @@ class PratosPrincipaisActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pratos_principais)
 
+
         val recyclerPratos = findViewById<RecyclerView>(R.id.recyclerPratos)
         val viewManagerPratos = GridLayoutManager(this, 2)
-        val viewAdapterPratos = PratosAdapter(
-            arrayListOf<Pratos>(
-                Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
-                Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
-                Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
-                Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
-                Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
-                Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
-                Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
-                Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
-                Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
-                Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama)
 
-            )
+         val pratosPrincipais = listOf<Pratos>(
+            Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
+            Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
+            Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
+            Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
+            Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
+            Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
+            Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
+            Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
+            Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama),
+            Pratos("Salada com molho Gengibre", fotoPrato = R.drawable.ayoama)
         )
-//        recyclerPratos.apply {
-//            layoutManager = viewManagerPratos
-//            adapter = viewAdapterPratos
-//
-//            setHasFixedSize(true)
-    //    }
+
+
+        val viewAdapterPratos = PratosAdapter(pratosPrincipais) {
+            val intent = Intent(this, DescricaoPratoActivity::class.java)
+            startActivity(intent)
+        }
+
+        recyclerPratos.apply {
+            layoutManager = viewManagerPratos
+            adapter = viewAdapterPratos
+
+            setHasFixedSize(true)
+        }
     }
 }

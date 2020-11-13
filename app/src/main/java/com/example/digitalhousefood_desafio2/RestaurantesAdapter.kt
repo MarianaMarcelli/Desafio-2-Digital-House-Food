@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class RestaurantesAdapter(private val dataSet: List<Restaurantes>) :
+class RestaurantesAdapter(private val dataSet: List<Restaurantes>, private val listener: (Restaurantes) ->Unit) :
     RecyclerView.Adapter<RestaurantesAdapter.RestaurantesViewHolder>() {
 
     class RestaurantesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -35,7 +35,10 @@ class RestaurantesAdapter(private val dataSet: List<Restaurantes>) :
     }
 
     override fun onBindViewHolder(holder: RestaurantesViewHolder, position: Int) {
-        holder.bind(dataSet[position])
+       val item = dataSet[position]
+        holder.bind(item)
+
+        holder.itemView.setOnClickListener { listener(item) }
     }
 
     override fun getItemCount() = dataSet.size

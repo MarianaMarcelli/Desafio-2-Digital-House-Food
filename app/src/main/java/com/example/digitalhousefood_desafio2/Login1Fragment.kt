@@ -30,12 +30,10 @@ class Login1Fragment : Fragment() {
             val emailLogin = view.findViewById<EditText>(R.id.edtEmailLogin)
             val passwordLogin = view.findViewById<EditText>(R.id.edtPasswordLogin)
 
-
             if (emailLogin.text.toString().isBlank()) {
                 emailLogin.error = "Campo vazio"
                 camposValidos = false
             }
-
             if (passwordLogin.text.toString().isBlank()) {
                 passwordLogin.error = "Campo vazio"
                 camposValidos = false
@@ -44,14 +42,11 @@ class Login1Fragment : Fragment() {
                 emailLogin.text?.clear()
                 passwordLogin.text?.clear()
 
-
                 navController.navigate(R.id.action_login1Fragment_to_restaurantesActivity2)
             }
-
-            view.findViewById<Button>(R.id.btnREGISTER).setOnClickListener {
-                navController.navigate(R.id.action_login1Fragment_to_register1Fragment)
-            }
-
+        }
+        view.findViewById<Button>(R.id.btnREGISTER).setOnClickListener {
+            navController.navigate(R.id.action_login1Fragment_to_register1Fragment)
         }
     }
 }

@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".DescricaoPratoActivity"></activity>
         <activity
             android:name=".RestaurantesActivity2"
             android:theme="@style/AppTheme" />
-        <activity android:name=".PratosPrincipaisActivity"
+        <activity
+            android:name=".PratosPrincipaisActivity"
             android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
         <activity
             android:name=".SplashScreenActivity"

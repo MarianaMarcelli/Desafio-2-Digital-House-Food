@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class PratosAdapter(private val dataSet: List<Pratos>) :
+class PratosAdapter(private val dataSet: List<Pratos>, private val listener: (Pratos) -> Unit) :
     RecyclerView.Adapter<PratosAdapter.PratosViewHolder>() {
 
     class PratosViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -17,24 +17,24 @@ class PratosAdapter(private val dataSet: List<Pratos>) :
         fun bind(prato: Pratos) {
             nomePrato.text = prato.nome
             fotoPrato.setImageResource(prato.fotoPrato)
-
         }
     }
 
     override fun getItemCount() = dataSet.size
 
     override fun onBindViewHolder(holder: PratosViewHolder, position: Int) {
-        holder.bind(dataSet[position])
+        val item = dataSet[position]
+        holder.bind(item)
+
+        holder.itemView.setOnClickListener {
+            listener(item)
+        }
     }
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): PratosAdapter.PratosViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PratosViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.modelo_prato, parent, false)
 
         return PratosViewHolder(view)
     }
-
 }

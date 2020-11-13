@@ -52,14 +52,11 @@ class Register1Fragment : Fragment() {
             if (repeatePassword.text.toString().isBlank()) {
                 repeatePassword.error = "Campo Vazio"
                 todosCamposValidos = false
-            }
-            if (repeatePassword.text != password.text) {
+            } else if (repeatePassword.text != password.text) {
                 repeatePassword.error = "Repita a senha digitada anteriorente"
-
-            } else {
-                repeatePassword.text.clear()
-
+               todosCamposValidos = false
             }
+
             if (todosCamposValidos) {
                 name.text?.clear()
                 email.text.clear()
@@ -70,7 +67,6 @@ class Register1Fragment : Fragment() {
             }
 
         }
-
 
 
     }
