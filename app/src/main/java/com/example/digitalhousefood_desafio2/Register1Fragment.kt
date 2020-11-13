@@ -1,5 +1,6 @@
 package com.example.digitalhousefood_desafio2
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -7,16 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.textfield.TextInputEditText
 
 class Register1Fragment : Fragment() {
-
-     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,17 +29,70 @@ class Register1Fragment : Fragment() {
 
         view.findViewById<Button>(R.id.btnRegisterRegister).setOnClickListener {
 
-            val name = view.findViewById<EditText>(R.id.edtNameRegister)
-            val email = view.findViewById<EditText>(R.id.edtEmailRegister)
-            val password = view.findViewById<EditText>(R.id.edtPasswordRegister)
-            val repeatePassword = view.findViewById<EditText>(R.id.textRepeatPassword)
+            var todosCamposValidos = true
 
+            val name = view.findViewById<TextInputEditText>(R.id.editNameRegister)
+            val email = view.findViewById<EditText>(R.id.editEmailRegister)
+            val password = view.findViewById<EditText>(R.id.editTextPassword)
+            val repeatePassword = view.findViewById<EditText>(R.id.editTextRepeatPassword)
 
+            if (name.text.toString().isBlank()) {
+                name.error = "Campo vazio"
+                todosCamposValidos = false
+            }
 
+            if (email.text.toString().isBlank()) {
+                email.error = "Campo vazio"
+                todosCamposValidos = false
+            }
+            if (password.text.toString().isBlank()) {
+                password.error = "Campo vazio"
+                todosCamposValidos = false
+            }
+            if (repeatePassword.text.toString().isBlank()) {
+                repeatePassword.error = "Campo Vazio"
+                todosCamposValidos = false
+            }
+            if (repeatePassword.text != password.text) {
+                repeatePassword.error = "Repita a senha digitada anteriorente"
 
+            } else {
+                repeatePassword.text.clear()
 
-            navController.navigate(R.id.action_register1Fragment_to_restaurantFragment)
+            }-
+            if (todosCamposValidos) {
+                name.text?.clear()
+                email.text.clear()
+                password.text.clear()
+                repeatePassword.text.clear()
+
+                navController.navigate(R.id.action_register1Fragment_to_restaurantesActivity)
+            }
+
         }
 
+//
+//            when {
+//                name.toString().isEmpty() -> {
+//                    name.error = "Campo vazio"
+//                }
+//                email.toString().isEmpty() -> {
+//                    email.error = "Campo vazio"
+//                }
+//                password.toString().isEmpty() -> {
+//                    email.error = "Campo vazio"
+//                }
+//                repeatePassword.toString().isEmpty() -> {
+//                    email.error = "Campo vazio"
+//                }
+//                else -> {
+//                    navController.navigate(R.id.action_register1Fragment_to_restaurantesActivity)
+//                }
+//
+//            val intent = Intent(this, RestaurantesActivity::class.java)
+//            startActivity(intent)
+//            }
+
     }
+
 }

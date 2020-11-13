@@ -7,25 +7,35 @@
     <fragment
         android:id="@+id/login1Fragment"
         android:name="com.example.digitalhousefood_desafio2.Login1Fragment"
-        android:label="Login1Fragment" >
+        android:label="Login1Fragment">
         <action
             android:id="@+id/action_login1Fragment_to_register1Fragment"
             app:destination="@id/register1Fragment" />
         <action
-            android:id="@+id/action_login1Fragment_to_restaurantFragment"
-            app:destination="@id/restaurantFragment" />
+            android:id="@+id/action_login1Fragment_to_restaurantesActivity2"
+            app:destination="@id/restaurantesActivity2" />
     </fragment>
     <fragment
         android:id="@+id/register1Fragment"
         android:name="com.example.digitalhousefood_desafio2.Register1Fragment"
-        android:label="Register1Fragment" >
+        android:label="Register1Fragment">
         <action
-            android:id="@+id/action_register1Fragment_to_restaurantFragment"
-            app:destination="@id/restaurantFragment" />
+            android:id="@+id/action_register1Fragment_to_restaurantesActivity"
+            app:destination="@id/restaurantesActivity" />
     </fragment>
-    <fragment
-        android:id="@+id/restaurantFragment"
-        android:name="com.example.digitalhousefood_desafio2.RestaurantFragment"
-        android:label="fragment_restaurant"
-        tools:layout="@layout/fragment_restaurant" />
+    <activity
+        android:id="@+id/restaurantesActivity"
+        android:name="com.example.digitalhousefood_desafio2.RestaurantesActivity"
+        android:label="activity_restaurantes"
+        tools:layout="@layout/activity_restaurantes" />
+    <activity
+        android:id="@+id/pratosPrincipaisActivity"
+        android:name="com.example.digitalhousefood_desafio2.PratosPrincipaisActivity"
+        android:label="activity_pratos_principais"
+        tools:layout="@layout/activity_pratos_principais" />
+    <activity
+        android:id="@+id/restaurantesActivity2"
+        android:name="com.example.digitalhousefood_desafio2.RestaurantesActivity2"
+        android:label="activity_restaurantes2"
+        tools:layout="@layout/activity_restaurantes2" />
 </navigation>

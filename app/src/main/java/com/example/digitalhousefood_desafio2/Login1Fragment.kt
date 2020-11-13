@@ -10,14 +10,6 @@ import androidx.navigation.fragment.findNavController
 
 class Login1Fragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-
-        }
-    }
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,7 +24,9 @@ class Login1Fragment : Fragment() {
         val navController = findNavController()
 
         view.findViewById<Button>(R.id.btnLogin).setOnClickListener {
-            navController.navigate(R.id.action_login1Fragment_to_restaurantFragment)
+
+
+            navController.navigate(R.id.action_login1Fragment_to_restaurantesActivity2)
         }
 
         view.findViewById<Button>(R.id.btnREGISTER).setOnClickListener {
@@ -40,5 +34,6 @@ class Login1Fragment : Fragment() {
         }
 
     }
+
 
 }

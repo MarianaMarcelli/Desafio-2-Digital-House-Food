@@ -10,8 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".RegisterActivity"
-            android:theme="@style/AppThemeNoActionBar" />
+            android:name=".RestaurantesActivity2"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".PratosPrincipaisActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/AppThemeNoActionBar">
