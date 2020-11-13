@@ -10,6 +10,7 @@ class PratosPrincipaisActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pratos_principais)
+        this.title = ""
 
 
         val recyclerPratos = findViewById<RecyclerView>(R.id.recyclerPratos)

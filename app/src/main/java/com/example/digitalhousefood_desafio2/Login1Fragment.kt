@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toolbar
 import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.activity_main.*
 
 class Login1Fragment : Fragment() {
 
@@ -15,7 +17,7 @@ class Login1Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+               // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_login1, container, false)
     }
 

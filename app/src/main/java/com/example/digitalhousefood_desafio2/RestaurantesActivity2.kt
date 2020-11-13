@@ -12,6 +12,7 @@ class RestaurantesActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_restaurantes2)
         title = "Digital House Foods"
 
+
         val meuRecyclerRestaurantes = findViewById<RecyclerView>(R.id.recyclerViewRestaurantes)
         val viewManager = LinearLayoutManager(this)
 

@@ -17,7 +17,7 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".PratosPrincipaisActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+            android:parentActivityName=".DescricaoPratoActivity" />
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/AppThemeNoActionBar">
@@ -29,7 +29,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            android:theme="@style/AppTheme"
             android:launchMode="singleTop"/>
     </application>
 

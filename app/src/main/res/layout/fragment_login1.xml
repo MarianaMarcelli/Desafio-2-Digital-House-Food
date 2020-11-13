@@ -42,7 +42,6 @@
         android:id="@+id/edtNameLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
         android:background="@color/colorBranco"
         android:hint="@string/email"
         android:textColorHint="@color/colorAccent"

@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
+import kotlinx.android.synthetic.main.activity_main.*
 
 class Register1Fragment : Fragment() {
 
@@ -20,10 +21,12 @@ class Register1Fragment : Fragment() {
     ): View? {
         return inflater.inflate(R.layout.fragment_register1, container, false)
 
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         val navController = findNavController()
 
